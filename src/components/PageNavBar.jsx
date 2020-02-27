@@ -6,7 +6,7 @@ import Pagination from 'react-bootstrap/Pagination';
 import { getBooks } from '../store/actions';
 import { useHistory } from 'react-router-dom';
 
-const PageNavBar = ({ dispatch, totalRecords, page, itemsPerPage }) => {
+export const PageNavBar = ({ dispatch, totalRecords, page, itemsPerPage }) => {
   let history = useHistory();
   const pageLimit = 20;
   const totalPages = Math.ceil(totalRecords / pageLimit);

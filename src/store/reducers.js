@@ -1,6 +1,6 @@
 import * as actionTypes from './constants';
 
-const initialState = {
+export const initialState = {
   page: 1,
   itemsPerPage: 20,
   isLoading: false,

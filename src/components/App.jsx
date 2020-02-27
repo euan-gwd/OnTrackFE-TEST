@@ -10,7 +10,7 @@ import BookItem from './BookItem';
 import PageNavBar from './PageNavBar';
 import './App.scss';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount = () => {
     const { fetchBooks, page, itemsPerPage } = this.props;
     const pageOptions = { page, itemsPerPage, filters: [] };

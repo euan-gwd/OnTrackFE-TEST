@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
-const SearchBar = ({ dispatch, page, itemsPerPage }) => {
+export const SearchBar = ({ dispatch, page, itemsPerPage }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSubmit = e => {

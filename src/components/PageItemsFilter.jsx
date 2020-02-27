@@ -6,7 +6,12 @@ import Button from 'react-bootstrap/Button';
 import { getBooks } from '../store/actions';
 import { useHistory } from 'react-router-dom';
 
-const PageItemsFilter = ({ dispatch, totalRecords, page, itemsPerPage }) => {
+export const PageItemsFilter = ({
+  dispatch,
+  totalRecords,
+  page,
+  itemsPerPage
+}) => {
   let history = useHistory();
 
   const handleItemsPerPageChange = newItemsPerPage => {
