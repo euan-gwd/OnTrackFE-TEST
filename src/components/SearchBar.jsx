@@ -31,7 +31,7 @@ const SearchBar = ({ dispatch, page, itemsPerPage }) => {
           onChange={e => setSearchTerm(e.target.value)}
         />
         <InputGroup.Append>
-          <Button id="inputGroup-sizing-sm" variant="secondary" type="submit">
+          <Button id="inputGroup-sizing-sm" variant="primary" type="submit">
             Search
           </Button>
         </InputGroup.Append>
