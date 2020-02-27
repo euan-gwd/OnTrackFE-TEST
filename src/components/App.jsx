@@ -42,7 +42,7 @@ export class App extends Component {
         <PageItemsFilter />
 
         <ListGroup>
-          {books.map(book => (
+          {books.map((book) => (
             <ListGroup.Item key={book.id}>
               <BookItem book={book} />
             </ListGroup.Item>
@@ -57,7 +57,7 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   books: state.books,
   isLoading: state.isLoading,
   error: state.error,
@@ -67,7 +67,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch, pageOptions) => ({
-  fetchBooks: pageOptions => dispatch(getBooks(pageOptions))
+  fetchBooks: (pageOptions) => dispatch(getBooks(pageOptions))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

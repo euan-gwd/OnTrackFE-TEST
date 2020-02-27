@@ -1,8 +1,16 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { shallow } from 'enzyme';
+import { initialState } from '../store/reducers';
+import { App } from './App';
 
-test('renders as expected', () => {
-  // const result = render(<App />);
-  // expect(result).toMatchSnapshot();
+describe('App', () => {
+  it('renders as expected', () => {
+    const props = {
+      ...initialState,
+      fetchBooks: jest.fn().mockReturnValue()
+    };
+
+    const wrapper = shallow(<App {...props} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

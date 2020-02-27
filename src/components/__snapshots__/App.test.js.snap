@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders as expected 1`] = `
+<div
+  className="app-container"
+>
+  <h1
+    className="app-header"
+  >
+    The Library
+  </h1>
+  <Connect(SearchBar) />
+  <Connect(PageItemsFilter) />
+  <ListGroup
+    horizontal={null}
+    variant={null}
+  />
+  <div
+    className="page-navbar"
+  >
+    <Connect(PageNavBar) />
+  </div>
+</div>
+`;
