@@ -12,9 +12,9 @@ export const PageNavBar = ({ dispatch, totalRecords, page, itemsPerPage }) => {
   const totalPages = Math.ceil(totalRecords / pageLimit);
   const pageRanges = range(1, totalPages);
   const pagesChunks = chunk(pageRanges, pageLimit);
-  const [displayRanges] = pagesChunks.filter(item => item.includes(page));
+  const [displayRanges] = pagesChunks.filter((item) => item.includes(page));
 
-  const handlePageChange = pg => {
+  const handlePageChange = (pg) => {
     const pageOptions = {
       page: pg,
       itemsPerPage: itemsPerPage
@@ -47,34 +47,20 @@ export const PageNavBar = ({ dispatch, totalRecords, page, itemsPerPage }) => {
 
   return (
     <Pagination>
-      <Pagination.First
-        onClick={() => handlePageChange(1)}
-        disabled={page <= 1}
-      />
+      <Pagination.First onClick={() => handlePageChange(1)} disabled={page <= 1} />
       <Pagination.Prev disabled={page <= 1} onClick={() => handlePrev()} />
-      {displayRanges.map(pg => (
-        <Pagination.Item
-          key={pg}
-          active={pg === page}
-          onClick={() => handlePageChange(pg)}
-          to={`/${pg}`}
-        >
+      {displayRanges.map((pg) => (
+        <Pagination.Item key={pg} active={pg === page} onClick={() => handlePageChange(pg)} to={`/${pg}`}>
           {pg}
         </Pagination.Item>
       ))}
-      <Pagination.Next
-        onClick={() => handleNext()}
-        disabled={page === totalPages - 1}
-      />
-      <Pagination.Last
-        onClick={() => handlePageChange(totalPages - 1)}
-        disabled={page === totalPages - 1}
-      />
+      <Pagination.Next onClick={() => handleNext()} disabled={page === totalPages - 1} />
+      <Pagination.Last onClick={() => handlePageChange(totalPages - 1)} disabled={page === totalPages - 1} />
     </Pagination>
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   totalRecords: state.totalRecords,
   page: state.page,
   itemsPerPage: state.itemsPerPage

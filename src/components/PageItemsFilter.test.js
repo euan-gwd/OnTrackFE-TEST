@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PageNavBar } from './PageNavBar';
+import { initialState } from '../store/reducers';
+import { PageItemsFilter } from './PageItemsFilter';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -15,12 +16,11 @@ jest.mock('react-router-dom', () => ({
 describe('PageItemsFilter', () => {
   it('renders as expected', () => {
     const props = {
-      page: 1,
-      itemsPerPage: 20,
-      totalRecords: 100
+      ...initialState,
+      fetchBooks: jest.fn().mockReturnValue()
     };
 
-    const wrapper = shallow(<PageNavBar {...props} />);
+    const wrapper = shallow(<PageItemsFilter {...props} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

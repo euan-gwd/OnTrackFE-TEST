@@ -1,8 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import SearchBar from './SearchBar';
+import { shallow } from 'enzyme';
+import { SearchBar } from './SearchBar';
 
-test('renders as expected', () => {
-  // const result = render(<App />);
-  // expect(result).toMatchSnapshot();
+describe('SearchBar', () => {
+  it('renders as expected', () => {
+    const props = {
+      page: 1,
+      itemsPerPage: 20
+    };
+
+    const wrapper = shallow(<SearchBar {...props} />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

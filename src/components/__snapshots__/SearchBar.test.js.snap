@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar renders as expected 1`] = `
+<Form
+  inline={false}
+  noValidate={true}
+  onSubmit={[Function]}
+>
+  <InputGroup
+    className="mb-3"
+    size="sm"
+  >
+    <FormControl
+      aria-describedby="inputGroup-sizing-sm"
+      aria-label="Small"
+      onChange={[Function]}
+      value=""
+    />
+    <InputGroupAppend>
+      <Button
+        active={false}
+        disabled={false}
+        id="inputGroup-sizing-sm"
+        type="submit"
+        variant="primary"
+      >
+        Search
+      </Button>
+    </InputGroupAppend>
+  </InputGroup>
+</Form>
+`;

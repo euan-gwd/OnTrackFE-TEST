@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 export const SearchBar = ({ dispatch, page, itemsPerPage }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     const pageOptions = {
@@ -28,7 +28,7 @@ export const SearchBar = ({ dispatch, page, itemsPerPage }) => {
           aria-label="Small"
           aria-describedby="inputGroup-sizing-sm"
           value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
         <InputGroup.Append>
           <Button id="inputGroup-sizing-sm" variant="primary" type="submit">
@@ -40,7 +40,7 @@ export const SearchBar = ({ dispatch, page, itemsPerPage }) => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   page: state.page,
   itemsPerPage: state.itemsPerPage
 });
