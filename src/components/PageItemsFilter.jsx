@@ -25,16 +25,16 @@ export const PageItemsFilter = ({ dispatch, totalRecords, page, itemsPerPage }) 
         <Button variant="outline-secondary" disabled>
           Items Per Page
         </Button>
-        <Button variant="secondary" active={itemsPerPage === 20} onClick={() => handleItemsPerPageChange(20)}>
+        <Button variant="primary" active={itemsPerPage === 20} onClick={() => handleItemsPerPageChange(20)}>
           20
         </Button>
-        <Button variant="secondary" active={itemsPerPage === 50} onClick={() => handleItemsPerPageChange(50)}>
+        <Button variant="primary" active={itemsPerPage === 50} onClick={() => handleItemsPerPageChange(50)}>
           50
         </Button>
-        <Button variant="secondary" active={itemsPerPage === 75} onClick={() => handleItemsPerPageChange(75)}>
+        <Button variant="primary" active={itemsPerPage === 75} onClick={() => handleItemsPerPageChange(75)}>
           75
         </Button>
-        <Button variant="secondary" active={itemsPerPage === 100} onClick={() => handleItemsPerPageChange(100)}>
+        <Button variant="primary" active={itemsPerPage === 100} onClick={() => handleItemsPerPageChange(100)}>
           100
         </Button>
       </ButtonGroup>
