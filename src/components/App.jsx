@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getBooks } from '../store/actions';
 import ListGroup from 'react-bootstrap/ListGroup';
-
 import Alert from 'react-bootstrap/Alert';
 import Loader from './Loader';
 import SearchBar from './SearchBar';
@@ -50,7 +49,9 @@ class App extends Component {
           ))}
         </ListGroup>
 
-        <PageNavBar />
+        <div className="page-navbar">
+          <PageNavBar />
+        </div>
       </div>
     );
   }
