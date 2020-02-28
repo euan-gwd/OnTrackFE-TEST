@@ -8,6 +8,7 @@ import SearchBar from './SearchBar';
 import PageItemsFilter from './PageItemsFilter';
 import BookItem from './BookItem';
 import PageNavBar from './PageNavBar';
+import isEmpty from 'lodash/isEmpty';
 import './App.scss';
 
 export class App extends Component {
@@ -41,17 +42,24 @@ export class App extends Component {
 
         <PageItemsFilter />
 
-        <ListGroup>
-          {books.map((book) => (
-            <ListGroup.Item key={book.id}>
-              <BookItem book={book} />
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
-
-        <div className="page-navbar">
-          <PageNavBar />
-        </div>
+        {isEmpty(books) ? (
+          <ListGroup>
+            <Alert variant="warning">{`Sorry, No Books found. Please try again.`}</Alert>
+          </ListGroup>
+        ) : (
+          <>
+            <ListGroup>
+              {books.map((book) => (
+                <ListGroup.Item key={book.id}>
+                  <BookItem book={book} />
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+            <div className="page-navbar">
+              <PageNavBar />
+            </div>
+          </>
+        )}
       </div>
     );
   }

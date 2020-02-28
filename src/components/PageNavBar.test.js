@@ -13,11 +13,22 @@ jest.mock('react-router-dom', () => ({
 }));
 
 describe('PageItemsFilter', () => {
-  it('renders as expected', () => {
+  test('renders Pagination with records in array', () => {
     const props = {
       page: 1,
       itemsPerPage: 20,
       totalRecords: 100
+    };
+
+    const wrapper = shallow(<PageNavBar {...props} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('renders Pagination with no records in array', () => {
+    const props = {
+      page: 1,
+      itemsPerPage: 20,
+      totalRecords: 1
     };
 
     const wrapper = shallow(<PageNavBar {...props} />);

@@ -13,6 +13,7 @@ export const PageNavBar = ({ dispatch, totalRecords, page, itemsPerPage }) => {
   const pageRanges = range(1, totalPages);
   const pagesChunks = chunk(pageRanges, pageLimit);
   const [displayRanges] = pagesChunks.filter((item) => item.includes(page));
+  const hasPages = displayRanges !== undefined ? displayRanges : false;
 
   const handlePageChange = (pg) => {
     const pageOptions = {
@@ -46,17 +47,31 @@ export const PageNavBar = ({ dispatch, totalRecords, page, itemsPerPage }) => {
   };
 
   return (
-    <Pagination>
-      <Pagination.First onClick={() => handlePageChange(1)} disabled={page <= 1} />
-      <Pagination.Prev disabled={page <= 1} onClick={() => handlePrev()} />
-      {displayRanges.map((pg) => (
-        <Pagination.Item key={pg} active={pg === page} onClick={() => handlePageChange(pg)} to={`/${pg}`}>
-          {pg}
-        </Pagination.Item>
-      ))}
-      <Pagination.Next onClick={() => handleNext()} disabled={page === totalPages - 1} />
-      <Pagination.Last onClick={() => handlePageChange(totalPages - 1)} disabled={page === totalPages - 1} />
-    </Pagination>
+    <>
+      {hasPages ? (
+        <Pagination>
+          <Pagination.First onClick={() => handlePageChange(1)} disabled={page <= 1} />
+          <Pagination.Prev disabled={page <= 1} onClick={() => handlePrev()} />
+          {displayRanges.map((pg) => (
+            <Pagination.Item key={pg} active={pg === page} onClick={() => handlePageChange(pg)} to={`/${pg}`}>
+              {pg}
+            </Pagination.Item>
+          ))}
+          <Pagination.Next onClick={() => handleNext()} disabled={page === totalPages - 1} />
+          <Pagination.Last onClick={() => handlePageChange(totalPages - 1)} disabled={page === totalPages - 1} />
+        </Pagination>
+      ) : (
+        <Pagination>
+          <Pagination.First disabled />
+          <Pagination.Prev disabled />
+          <Pagination.Item active={1} onClick={() => handlePageChange(1)} to={`/${1}`}>
+            Show All
+          </Pagination.Item>
+          <Pagination.Next disabled />
+          <Pagination.Last disabled />
+        </Pagination>
+      )}
+    </>
   );
 };
 
