@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageItemsFilter renders as expected 1`] = `
+<ButtonToolbar
+  className="justify-content-end"
+  role="toolbar"
+>
+  <div />
+  <ButtonGroup
+    role="group"
+    size="sm"
+    toggle={false}
+    vertical={false}
+  >
+    <Button
+      active={false}
+      disabled={true}
+      type="button"
+      variant="outline-secondary"
+    >
+      Items Per Page
+    </Button>
+    <Button
+      active={true}
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+      variant="primary"
+    >
+      20
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+      variant="primary"
+    >
+      50
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+      variant="primary"
+    >
+      75
+    </Button>
+    <Button
+      active={false}
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+      variant="primary"
+    >
+      100
+    </Button>
+  </ButtonGroup>
+</ButtonToolbar>
+`;

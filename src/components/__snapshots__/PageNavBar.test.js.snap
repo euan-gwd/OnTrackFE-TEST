@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageItemsFilter renders Pagination with no records in array 1`] = `
+<Fragment>
+  <ForwardRef>
+    <First
+      disabled={true}
+    />
+    <Prev
+      disabled={true}
+    />
+    <PageItem
+      active={1}
+      activeLabel="(current)"
+      disabled={false}
+      onClick={[Function]}
+      to="/1"
+    >
+      Show All
+    </PageItem>
+    <Next
+      disabled={true}
+    />
+    <Last
+      disabled={true}
+    />
+  </ForwardRef>
+</Fragment>
+`;
+
+exports[`PageItemsFilter renders Pagination with records in array 1`] = `
+<Fragment>
+  <ForwardRef>
+    <First
+      disabled={true}
+      onClick={[Function]}
+    />
+    <Prev
+      disabled={true}
+      onClick={[Function]}
+    />
+    <PageItem
+      active={true}
+      activeLabel="(current)"
+      disabled={false}
+      key="1"
+      onClick={[Function]}
+      to="/1"
+    >
+      1
+    </PageItem>
+    <PageItem
+      active={false}
+      activeLabel="(current)"
+      disabled={false}
+      key="2"
+      onClick={[Function]}
+      to="/2"
+    >
+      2
+    </PageItem>
+    <PageItem
+      active={false}
+      activeLabel="(current)"
+      disabled={false}
+      key="3"
+      onClick={[Function]}
+      to="/3"
+    >
+      3
+    </PageItem>
+    <PageItem
+      active={false}
+      activeLabel="(current)"
+      disabled={false}
+      key="4"
+      onClick={[Function]}
+      to="/4"
+    >
+      4
+    </PageItem>
+    <Next
+      disabled={false}
+      onClick={[Function]}
+    />
+    <Last
+      disabled={false}
+      onClick={[Function]}
+    />
+  </ForwardRef>
+</Fragment>
+`;
+
+exports[`PageItemsFilter renders with no records in array 1`] = `
+<Fragment>
+  <ForwardRef>
+    <First
+      disabled={true}
+    />
+    <Prev
+      disabled={true}
+    />
+    <PageItem
+      active={1}
+      activeLabel="(current)"
+      disabled={false}
+      onClick={[Function]}
+      to="/1"
+    >
+      Show All
+    </PageItem>
+    <Next
+      disabled={true}
+    />
+    <Last
+      disabled={true}
+    />
+  </ForwardRef>
+</Fragment>
+`;
+
+exports[`PageItemsFilter renders with records in array 1`] = `
+<Fragment>
+  <ForwardRef>
+    <First
+      disabled={true}
+      onClick={[Function]}
+    />
+    <Prev
+      disabled={true}
+      onClick={[Function]}
+    />
+    <PageItem
+      active={true}
+      activeLabel="(current)"
+      disabled={false}
+      key="1"
+      onClick={[Function]}
+      to="/1"
+    >
+      1
+    </PageItem>
+    <PageItem
+      active={false}
+      activeLabel="(current)"
+      disabled={false}
+      key="2"
+      onClick={[Function]}
+      to="/2"
+    >
+      2
+    </PageItem>
+    <PageItem
+      active={false}
+      activeLabel="(current)"
+      disabled={false}
+      key="3"
+      onClick={[Function]}
+      to="/3"
+    >
+      3
+    </PageItem>
+    <PageItem
+      active={false}
+      activeLabel="(current)"
+      disabled={false}
+      key="4"
+      onClick={[Function]}
+      to="/4"
+    >
+      4
+    </PageItem>
+    <Next
+      disabled={false}
+      onClick={[Function]}
+    />
+    <Last
+      disabled={false}
+      onClick={[Function]}
+    />
+  </ForwardRef>
+</Fragment>
+`;

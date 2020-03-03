@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders with books 1`] = `
+<div
+  className="app-container"
+>
+  <h1
+    className="app-header"
+  >
+    The Library
+  </h1>
+  <Connect(SearchBar) />
+  <Connect(PageItemsFilter) />
+  <ListGroup
+    horizontal={null}
+    variant={null}
+  >
+    <ListGroupItem
+      active={false}
+      disabled={false}
+      key="1"
+      variant={null}
+    >
+      <BookItem
+        book={
+          Object {
+            "book_author": Array [
+              "mocked",
+            ],
+            "book_pages": 104,
+            "book_publication_city": "mocked",
+            "book_publication_country": "mocked",
+            "book_publication_year": 2020,
+            "book_title": "mocked",
+            "id": 1,
+          }
+        }
+      />
+    </ListGroupItem>
+  </ListGroup>
+  <div
+    className="page-navbar"
+  >
+    <Connect(PageNavBar) />
+  </div>
+</div>
+`;
+
+exports[`App renders with no books error 1`] = `
+<div
+  className="app-container"
+>
+  <h1
+    className="app-header"
+  >
+    The Library
+  </h1>
+  <Connect(SearchBar) />
+  <Connect(PageItemsFilter) />
+  <ListGroup
+    horizontal={null}
+    variant={null}
+  >
+    <Alert
+      closeLabel="Close alert"
+      show={true}
+      transition={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "appear": false,
+            "in": false,
+            "mountOnEnter": false,
+            "timeout": 300,
+            "unmountOnExit": false,
+          },
+          "displayName": "Fade",
+          "render": [Function],
+        }
+      }
+      variant="warning"
+    >
+      Sorry, No Books found. Please try again.
+    </Alert>
+  </ListGroup>
+</div>
+`;
